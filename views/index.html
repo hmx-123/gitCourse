@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/index.css" />
+  </head>
+  <body>
+    <div class="content">
+      <a class="pb_btn" href="/add">发表内容</a>
+      <div class="list">
+        <ul>
+          {{each arr v i}}
+          <li>
+            <img src="../static/images/timg.jpg" alt="" class="pic" />
+            <div class="list_con">
+              <div class="time">
+                <strong>发表时间: <i>{{v.cTime}}</i></strong>
+               <a href="/del?id={{v.id}}"> <img src="../static/images/lj.jpg" alt="" /></a>
+              </div>
+              <p>
+                <b>{{v.author}}：</b>
+                {{v.content}}
+              </p>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
